@@ -133,7 +133,7 @@ func (img *SLImages) patchTags(patchFn func(orig Tags), force bool, imageIDs ...
 		// EditImage edits only non-zero-value fields.
 		// Removal of the last tag we need to handle explicitely.
 		if oldNum > 0 && len(fields.Tags) == 0 {
-			fields.Description = "{}"
+			fields.Note = "{}"
 			fields.Tags = nil
 		}
 
